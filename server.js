@@ -14,7 +14,7 @@ const app = express()
 app.use(express.json())
 app.use(cors({
     // origin: "https://chore-hero.netlify.app"
-    origin: ["https://chore-hero.netlify.app", "http://localhost:5173"]
+    origin: ["https://chore-hero.netlify.app", "https://chore-hero-admin.netlify.app", "http://localhost:5173"]
 }))
 
 // db connection
