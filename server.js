@@ -13,7 +13,8 @@ const app = express()
 // middleware
 app.use(express.json())
 app.use(cors({
-    origin: "https://chore-hero.netlify.app"
+    // origin: "https://chore-hero.netlify.app"
+    origin: ["https://chore-hero.netlify.app", "http://localhost:5173"]
 }))
 
 // db connection
