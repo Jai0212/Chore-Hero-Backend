@@ -4,7 +4,7 @@ import { placeOrder, verifyOrder, userOrders } from '../controllers/orderControl
 
 const orderRouter = express.Router();
 
-orderRouter.post('/place', authenticationMiddleware, placeOrder); 
+orderRouter.post('/place', authenticationMiddleware, placeOrder);
 orderRouter.post('/verify', verifyOrder);
 orderRouter.post('/userorders', authenticationMiddleware, userOrders);
 
