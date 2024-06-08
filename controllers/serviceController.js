@@ -2,7 +2,6 @@ import { response } from "express";
 import serviceModel from "../models/serviceModel.js";
 import fs from "fs";
 
-// add service
 const addAllService = async (req, res) => {
 
     let image_filename = req.file ? req.file.filename : req.body.image;
@@ -23,7 +22,6 @@ const addAllService = async (req, res) => {
     }
 };
 
-// list of all services
 const listServices = async (req, res) => {
     try {
         const services = await serviceModel.find({});
@@ -35,7 +33,6 @@ const listServices = async (req, res) => {
     }
 }
 
-// remove service
 const removeService = async (req, res) => {
 
     try {

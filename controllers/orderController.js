@@ -37,8 +37,6 @@ const placeOrder = async (req, res) => {
             quantity: item.quantity
         }));
 
-        // const totalAmount = items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-
         line_items.push({
             price_data: {
                 currency: "aed",
@@ -55,8 +53,6 @@ const placeOrder = async (req, res) => {
             mode: "payment",
             success_url: `${frontend_url}/verify?success=true&orderId=${newOrder._id}`,
             cancel_url: `${frontend_url}/verify?success=false&orderId=${newOrder._id}`
-            // success_url: `${frontend_url}/myorders`,
-            // cancel_url: `${frontend_url}/`
         });
 
         res.json({ success: true, session_url: session.url });

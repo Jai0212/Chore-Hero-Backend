@@ -7,7 +7,6 @@ const createToken = (id) => {
     return jwt.sign({ id }, process.env.JWT_SECRET);
 }
 
-// login
 const loginUser = async (req, res) => {
     const { email, password } = req.body;
 
@@ -33,7 +32,6 @@ const loginUser = async (req, res) => {
     }
 }
 
-// register
 const registerUser = async (req, res) => {
     const { name, password, email } = req.body;
 
